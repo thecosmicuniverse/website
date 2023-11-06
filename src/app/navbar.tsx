@@ -228,10 +228,12 @@ function UserNav() {
             Billing
             <DropdownMenuShortcut>⌘B</DropdownMenuShortcut>
           </DropdownMenuItem>
-          <DropdownMenuItem>
-            Settings
-            <DropdownMenuShortcut>⌘S</DropdownMenuShortcut>
-          </DropdownMenuItem>
+          <Link href="/settings">
+            <DropdownMenuItem>
+              Settings
+              <DropdownMenuShortcut>⌘S</DropdownMenuShortcut>
+            </DropdownMenuItem>
+          </Link>
           <DropdownMenuItem>Attach Account</DropdownMenuItem>
         </DropdownMenuGroup>
         <DropdownMenuSeparator />
@@ -246,13 +248,10 @@ function UserNav() {
 
 export function Navbar() {
   return (
-    <div className="flex justify-between py-2 px-4 items-center">
+    <div className="fixed w-full bg-background flex justify-between py-2 px-4 items-center">
       <NavHome />
       <MainNav />
-      <div className="flex space-x-2">
-        <UserNav />
-        <ModeToggle />
-      </div>
+      <UserNav />
     </div>
   )
 }
