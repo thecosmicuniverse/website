@@ -1,14 +1,17 @@
 import Image from 'next/image'
 import { Button } from "@/components/ui/button";
+import ElvesPng from "@/assets/doc/elves.png";
+import CrystalPng from "@/assets/doc/crystal.png";
+import MapPng from "@/assets/doc/map.png";
 
 export default function Home() {
   return (
     <main className="flex-1">
-      <section className="w-full py-20 px-4 md:px-6 text-center">
-        <h1 className="text-5xl font-bold tracking-tighter mb-4">Welcome to Cosmic Universe</h1>
-        <p className="max-w-2xl mx-auto text-lg text-gray-300 mb-8">
+      <section className="w-full py-20 px-4 md:px-6 text-center space-y-8">
+        <h1>Welcome to Cosmic Universe</h1>
+        <h6 className="max-w-2xl mx-auto">
           Join a massive community of players, explore vast landscapes, and engage in epic battles!
-        </p>
+        </h6>
         <div className="flex justify-center space-x-4">
           <Button variant="default">
             Play Now
@@ -85,36 +88,36 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="w-full py-20 px-4 md:px-6 bg-black">
+      <section className="w-full py-20 px-4 md:px-6">
         <h2 className="text-3xl font-bold tracking-tighter text-center mb-8">Hero Carousel</h2>
         <div className="flex overflow-x-scroll space-x-4">
-          <img
+          <Image
             alt="Hero 1"
             className="rounded-lg"
             height="400"
-            src="/placeholder.svg"
+            src={ElvesPng}
             style={{
               aspectRatio: "600/400",
               objectFit: "cover",
             }}
             width="600"
           />
-          <img
+          <Image
             alt="Hero 2"
             className="rounded-lg"
             height="400"
-            src="/placeholder.svg"
+            src={CrystalPng}
             style={{
               aspectRatio: "600/400",
               objectFit: "cover",
             }}
             width="600"
           />
-          <img
+          <Image
             alt="Hero 3"
             className="rounded-lg"
             height="400"
-            src="/placeholder.svg"
+            src={MapPng}
             style={{
               aspectRatio: "600/400",
               objectFit: "cover",

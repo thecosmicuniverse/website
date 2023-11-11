@@ -53,6 +53,9 @@ module.exports = {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+      lineHeight: {
+        "neg-1": "0.8",
+      },
       keyframes: {
         "accordion-down": {
           from: { height: 0 },

@@ -58,4 +58,31 @@
   body {
     @apply bg-background text-foreground;
   }
+  h1 {
+    font-size: 3rem;
+    line-height: 0.8;
+    font-weight: 700;
+    letter-spacing: -0.05em;
+  }
+  h6 {
+    font-size: 1.125rem /* 18px */;
+    line-height: 1;
+    --tw-text-opacity: 1;
+    color: rgb(209 213 219 / var(--tw-text-opacity));
+  }
+  p, span {
+    line-height: 1;
+  }
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
 }
